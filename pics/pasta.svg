@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.3 467.6" style="enable-background:new 0 0 595.3 467.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0099CE;stroke:#FCC016;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FCC016;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:'LMRoman10-Bold';}
+	.st4{font-size:12px;}
+	.st5{font-size:10.6551px;}
+</style>
+<g>
+	<path class="st0" d="M189,59.6H20c-6.6,0-12-3.8-12-8.5V16.2c0-4.7,5.4-8.5,12-8.5h169c6.6,0,12,3.8,12,8.5v34.9
+		C201,55.8,195.6,59.6,189,59.6z"/>
+	<path class="st1" d="M577,59.4H219.3c-6.6,0-12-3.8-12-8.5V16c0-4.7,5.4-8.5,12-8.5H577c6.6,0,12,3.8,12,8.5v34.9
+		C589,55.6,583.6,59.4,577,59.4z"/>
+	<text transform="matrix(1 0 0 1 43.781 36.5151)" class="st2 st3 st4">1. Define Objectives</text>
+	<g>
+		<text transform="matrix(1 0 0 1 222.1963 23.5843)" class="st3 st5">•Identify Business Objectives </text>
+		<text transform="matrix(1 0 0 1 222.1963 36.3743)" class="st3 st5">•Identify Security &amp; Compliance Requirements </text>
+		<text transform="matrix(1 0 0 1 222.1963 49.1543)" class="st3 st5">•Business Impact Analysis</text>
+	</g>
+</g>
+<g>
+	<path class="st0" d="M189,123H20c-6.6,0-12-3.8-12-8.5V79.6c0-4.7,5.4-8.5,12-8.5h169c6.6,0,12,3.8,12,8.5v34.9
+		C201,119.2,195.6,123,189,123z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 47.081 93.1379)" class="st2 st3 st4">2. Define Technical</text>
+		<text transform="matrix(1 0 0 1 86.9621 107.5379)" class="st2 st3 st4">Scope</text>
+	</g>
+	<path class="st1" d="M577,122.9H219.3c-6.6,0-12-3.8-12-8.5V79.5c0-4.7,5.4-8.5,12-8.5H577c6.6,0,12,3.8,12,8.5v34.9
+		C589,119.1,583.6,122.9,577,122.9z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 222.1963 93.4744)" class="st3 st5">•Capture the Boundaries of the Technical Environment </text>
+		<text transform="matrix(1 0 0 1 222.1963 106.2643)" class="st3 st5">•Capture Infrastructure | Application | Software Dependencies</text>
+	</g>
+</g>
+<g>
+	<path class="st0" d="M189,186.5H20c-6.6,0-12-3.8-12-8.5v-34.9c0-4.7,5.4-8.5,12-8.5h169c6.6,0,12,3.8,12,8.5V178
+		C201,182.7,195.6,186.5,189,186.5z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 61.8287 156.6381)" class="st2 st3 st4">3. Application</text>
+		<text transform="matrix(1 0 0 1 59.7884 171.0381)" class="st2 st3 st4">Decomposition</text>
+	</g>
+	<path class="st1" d="M577,186.3H219.3c-6.6,0-12-3.8-12-8.5v-34.9c0-4.7,5.4-8.5,12-8.5H577c6.6,0,12,3.8,12,8.5v34.9
+		C589,182.5,583.6,186.3,577,186.3z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 222.1963 150.4845)" class="st3 st5">•Identify Use Cases | Define App. Entry Points &amp; Trust Levels </text>
+		<text transform="matrix(1 0 0 1 222.1963 163.2747)" class="st3 st5">•Identify Actors | Assets | Services | Roles | Data Sources </text>
+		<text transform="matrix(1 0 0 1 222.1963 176.0546)" class="st3 st5">•Data Flow Diagramming (DFDs) | Trust Boundaries</text>
+	</g>
+</g>
+<g>
+	<path class="st0" d="M189,249.9H20c-6.6,0-12-3.8-12-8.5v-34.9c0-4.7,5.4-8.5,12-8.5h169c6.6,0,12,3.8,12,8.5v34.9
+		C201,246.1,195.6,249.9,189,249.9z"/>
+	<text transform="matrix(1 0 0 1 48.5447 227.2382)" class="st2 st3 st4">4. Threat Analysis</text>
+	<path class="st1" d="M577,249.8H219.3c-6.6,0-12-3.8-12-8.5v-34.9c0-4.7,5.4-8.5,12-8.5H577c6.6,0,12,3.8,12,8.5v34.9
+		C589,246,583.6,249.8,577,249.8z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 222.1963 213.9844)" class="st3 st5">•Probabilistic Attack Scenarios Analysis </text>
+		<text transform="matrix(1 0 0 1 222.1963 226.7743)" class="st3 st5">•Regression Analysis on Security Events </text>
+		<text transform="matrix(1 0 0 1 222.1963 239.5544)" class="st3 st5">•Threat Intelligence Correlation &amp; Analytics</text>
+	</g>
+</g>
+<g>
+	<path class="st0" d="M189,334.8H20c-6.6,0-12-5.4-12-12v-49.2c0-6.6,5.4-12,12-12h169c6.6,0,12,5.4,12,12v49.2
+		C201,329.4,195.6,334.8,189,334.8z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 49.8887 294.2882)" class="st2 st3 st4">5. Vulnerability &amp;</text>
+		<text transform="matrix(1 0 0 1 41.8371 308.6882)" class="st2 st3 st4">Weaknesses Analysis</text>
+	</g>
+	<path class="st1" d="M577,334.6H219.3c-6.6,0-12-5.4-12-12v-49.2c0-6.6,5.4-12,12-12H577c6.6,0,12,5.4,12,12v49.2
+		C589,329.2,583.6,334.6,577,334.6z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 222.1963 281.7396)" class="st3 st5">•Queries of Existing Vulnerability Reports &amp; Issues Tracking </text>
+		<text transform="matrix(1 0 0 1 222.1963 294.5295)" class="st3 st5">•Threat to Existing Vulnerability Mapping Using Threat Trees </text>
+		<text transform="matrix(1 0 0 1 222.1963 307.3096)" class="st3 st5">•Design Flaw Analysis Using Use &amp; Abuse Cases </text>
+		<text transform="matrix(1 0 0 1 222.1963 320.0995)" class="st3 st5">•Scorings (CVSS/CWSS) | Enumerations (CWE/CVE)</text>
+	</g>
+</g>
+<g>
+	<path class="st0" d="M189.8,398.2h-169c-6.6,0-12-3.8-12-8.5v-34.9c0-4.7,5.4-8.5,12-8.5h169c6.6,0,12,3.8,12,8.5v34.9
+		C201.8,394.4,196.4,398.2,189.8,398.2z"/>
+	<text transform="matrix(1 0 0 1 46.7829 375.5377)" class="st2 st3 st4">6. Attack Modeling</text>
+	<path class="st1" d="M577.8,398.1H220.1c-6.6,0-12-3.8-12-8.5v-34.9c0-4.7,5.4-8.5,12-8.5h357.6c6.6,0,12,3.8,12,8.5v34.9
+		C589.8,394.2,584.4,398.1,577.8,398.1z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 221.657 362.2846)" class="st3 st5">•Attack Surface Analysis </text>
+		<text transform="matrix(1 0 0 1 221.657 375.0747)" class="st3 st5">•Attack Tree Development | Attack Library Mgt. </text>
+		<text transform="matrix(1 0 0 1 221.657 387.8547)" class="st3 st5">•Attack to Vulnerability &amp; Exploit Analysis Using Attack Trees</text>
+	</g>
+</g>
+<g>
+	<path class="st0" d="M189.8,461.7h-169c-6.6,0-12-3.8-12-8.5v-34.9c0-4.7,5.4-8.5,12-8.5h169c6.6,0,12,3.8,12,8.5v34.9
+		C201.8,457.9,196.4,461.7,189.8,461.7z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 52.9208 431.8381)" class="st2 st3 st4">7. Risk &amp; Impact</text>
+		<text transform="matrix(1 0 0 1 79.9804 446.2382)" class="st2 st3 st4">Analysis</text>
+	</g>
+	<path class="st1" d="M577.8,461.5H220.1c-6.6,0-12-3.8-12-8.5v-34.9c0-4.7,5.4-8.5,12-8.5h357.6c6.6,0,12,3.8,12,8.5V453
+		C589.8,457.7,584.4,461.5,577.8,461.5z"/>
+	<g>
+		<text transform="matrix(1 0 0 1 222.1963 425.6844)" class="st3 st5">•Qualify &amp; Quantify Business Impact </text>
+		<text transform="matrix(1 0 0 1 222.1963 438.4744)" class="st3 st5">•Countermeasure Identification &amp; Residual Risk Analysis </text>
+		<text transform="matrix(1 0 0 1 222.1963 451.2544)" class="st3 st5">•ID Risk Mitigation Strategies</text>
+	</g>
+</g>
+</svg>

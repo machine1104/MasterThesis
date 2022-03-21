@@ -1,0 +1,61 @@
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{varwidth}
+\usepackage{geometry}
+\usepackage{marginnote}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{xcolor}
+\usepackage{svg}
+\usepackage{changepage}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{comment}
+
+\graphicspath{ {pics/} }
+
+\definecolor{dummy-cyan}{HTML}{0099cd}
+\definecolor{dummy-yellow}{HTML}{fcc013}
+\definecolor{dummy-orange}{HTML}{f2a147}
+\definecolor{dummy-green}{HTML}{00afaa}
+\definecolor{dummy-red}{HTML}{e73e51}
+\definecolor{dummy-red-strong}{HTML}{3D0814}
+\setlength\arrayrulewidth{1.5pt}
+\arrayrulecolor{dummy-yellow}
+
+
+
+%Definition
+
+\newcommand{\definition}[3][\textwidth-\pgfkeysvalueof{/pgf/inner xsep}-2mm]{
+
+\begin{figure}[H]
+    \reversemarginpar
+    \marginnote{\includesvg[width=2cm]{def-icon.svg}}
+    \begin{tikzpicture}
+    
+    
+    \node[line width=.5mm, draw=dummy-yellow,  text width=#1, anchor=north west] (text) {\vspace*{25pt}\\\begin{adjustwidth}{10pt}{10pt}#3 \medskip \end{adjustwidth}};
+    
+    \node[text=white,anchor=north west,align=center, minimum height=25pt] (label) at (text.north west) {\LARGE#2 \hspace*{.5mm}};
+    
+    \path[draw=dummy-yellow,line width=.5mm,fill=dummy-cyan] 
+        (text.north west) --
+        (text.north east)  --
+        (text.north east|-label.south east) --
+        (text.north west|-label.south west) -- cycle;
+        
+    \node[text=white,anchor=west,align=center, minimum height=20pt] (label_2) at (label.west) {\LARGE \textbf{DUMMY} definition for \textbf{#2}\hspace*{.5mm}};
+
+    \end{tikzpicture}
+\end{figure}
+\FloatBarrier
+\noindent
+}
+
+\renewcommand\tabularxcolumn[1]{m{#1}}
+
+\endinput

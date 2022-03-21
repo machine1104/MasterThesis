@@ -1,0 +1,204 @@
+\chapter{Risk Analysis Methodologies}
+We have analyzed the weapons at our disposal, now we need to understand how to use them. There are various ways to make the most of them and in the following sections we will analyze the most important ones.
+\section{MEHARI}
+MEHARI \cite{CLUSIF2010} is an opensource methodology originally aimed at Chief Information Security Officers (CISOs), but is also intended for auditors, CIOs or risk managers who share largely the same or similar challenges. Generally aimed at professionals in short. MEHARI first objective is to provide a risk assessment and management method, specifically in the domain of information security, compliant to ISO/IEC 27005 (more of this in next chapter). MEHARI is founded on the principle that the tools required at each stage of security development must be consistent. By this, it should be understood that any results generated at one stage must be reusable by other tools later or elsewhere in the organization.
+\subsection{Risk analysis or assessment}
+A risk situation can be characterized by various factors:
+\begin{itemize}
+    \item Structural factors, which do not depend on security measures, but on the core activity of the organization, its environment and its context.
+    \item Risk reduction factors that are a direct function of implemented security measures.
+\end{itemize}
+The approach provided by MEHARI is based on risk situation knowledge bases and automated
+procedures for the evaluation of factors characterizing each risk and that allow assessing its
+level. In addition, the method provides assistance for the selection of appropriate treatment
+plans. In order to assess the risk, it is proposed to use a set of functions of the knowledge bases (for Microsoft Excel or Open Office, no fancy tools, vintage is the way) allowing to integrate the results of MEHARI modules (e.g. asset classification from the stakes analysis, diagnostics of security). When necessary, however, a spontaneous analysis of risk situation is possible, in particular where risk management is not the main objective and where security is managed through audits or security reference frameworks.
+\subsection{Security assessments}
+MEHARI is integrated into the organization's processes through diagnostic questionnaires of the security controls that allow to evaluate their level of quality ("How many attacks has this firewall blocked? Zero! Maybe it is necessary to replace it ..."). An essential strength of MEHARI, is its capability to assess the current level of risk as well as its future levels based on an expert knowledge base evaluating the quality level of the security measures, either operating or decided. The most simple security management process implies to run an assessment and decide to improve all those services that do not have a sufficient quality level. Quality too low? Improve. In slightly more complex situations such as large multinationals, MEHARI unique knowledge base can be used directly to create a security reference framework (or security policies) that will contain, and describe, the set of security rules and instructions that the enterprise or organization should follow . Even in this case, however, it is necessary to manage waivers and exceptions from the rules due to local implementation difficulties. From a risk analysis point of view, in terms of identifying all risk situations and the desire to cover all unacceptable risks, MEHARI is not restricted simply to the IT domain.
+\subsection{Analyzing the stakes}
+Whatever direction a manager wants to take regarding security policies, there must always be a balance between investments in security and the business stakes. For this reason it is important to understand what the hell these business stakes are and analyze them in a structured way and with high priority. MEHARI stakes analysis produces two types of results: a \textit{malfunction value scale} and a \textit{classification of information and assets}. The first consists of a description of the possible malfunctions, the definition of parameters for the evaluation of the seriousness of each malfunction and the evaluation of the critical threshold that changes the level of seriousness of the malfunction (e.g. Firewall: 10/10 blocked attacks = MUY BUENO; 3/10 blocked attacks = NO BUENO). The second, on the other hand, is an assessment of the assets based on criteria such as Availability, Integrity and Confidentiality to be considered fundamental. These are two different ways of expressing security stakes: the first more technical and detailed, the second more global and useful for awareness campaigns.
+\subsection{Implementation}
+Let's start with the risk assessment which is divided into \textit{Risk Identification, Analysis, Assessment} (repetition is not a mistake). Identification is relatively simple and based mainly on knowledge base (the risks are almost always the same for every organization). This knowledge base is made up of \textit{scenarios} which can also be modified at will. A scenario is characterized by:
+\begin{itemize}
+    \itemsep0em
+    \item An identifier
+    \item The type of primary asset
+    \item The type of vulnerability (secondary asset involved, damage, criterion concerned)
+    \item The type of threat (triggering event and its circumstances, possible actors)
+    \item Description of scenario
+\end{itemize}
+The security officer will need to select the most relevant scenarios before starting to examine them in detail. The intrinsic seriousness of the scenario, particular forms of asset or types of event, circumstances or actor are the relevant criteria to be evaluated during this choice. Once the scenarios compatible with the organization have been chosen, it is time to assess the risks identified.
+\begin{figure}[H]
+  \centering
+  \includesvg[inkscapelatex=false,width=\textwidth]{mehari-1.svg}
+  \caption{Risk assessment procedure}
+\end{figure}
+\noindent
+The knowledge base offers assistance mechanisms for the assessment of intrinsic likelihood and risk reduction factors, to calculate residual likelihood and impact and to assess the resulting seriousness of the risks. Let's go in order.\newline
+The intrinsic likelihood is the likelihood of a threat occurring when no security measures are in place. It is the starting probability level, also called "natural exposure" and is identified by a value ranging from 1 to 4. The probability that the building will burn is 2 (fairly unlikely), while the probability that an error will be made during the data input process is 4 (very likely). Similarly, intrinsic impact does not take into account security measures and basically depends on the primary asset type. For each type of asset, a given incident has an intrinsic impact (from 1 to 4) on availability, integrity or confidentiality. Everything is shown on simple tables. These tables are standard and take into account only 3 criteria, but can be expanded if necessary (also by creating new scenarios).\newline
+Taking note of intrinsic likelihood and impact, we begin to evaluate the factors for reducing these risks. The MEHARI methodology offers an automated system that shows the relative efficiency coefficient for each scenario and for each possible risk reduction factor. A risk reduction measure can be \textit{dissuasive, preventive, protective} or \textit{palliative}. The process is also automated for the evaluation of residual likelihood (STATUS-P) and impact (STATUS-I). On the basis of STATUS-P and STATUS-I, the seriousness of the scenario will be deduced and , through a risk acceptability table, will be decided whether this risk is acceptable or not. If it is, that's it: collect your salary and enjoy your vacation. If not, it is necessary to decide whether (and how) to reduce , avoid or transfer the risk. Also for this process, MEHARI has action plans available, grouped by the scenario family. The recommended procedure is as follows:
+\begin{itemize}
+    \itemsep0em
+    \item For each family, select the most effective plans (choose on the basis of effectiveness indicator).
+    \item Where appropriate, modify the goals for the services mentioned in the selected plan.
+    \item Validate the set of action plans by visualizing the resulting risks after implementation.
+    \item For each scenario where action plan does not reduce the risk, select additional measures, accept , avoid or transfer the risk.
+\end{itemize}
+
+\section{OWASP}
+Distributed by the non-profit foundation OWASP (Open Web Application Security Project), the OWASP Risk Rating Methodology \cite{Williams2022} has as its sole objective that of estimating the severity and likelihood of risks, mainly of web applications. Early in the life cycle, one may identify security concerns in the architecture or design by using threat modeling. Later, one may find security issues using code review or penetration testing. Or problems may not be discovered until the application is in production and is actually compromised. The presented framework is customizable because a vulnerability that is critical for one organization may not be so for another. However, the concept on which it is based is \textit{RISK = LIKELIHOOD * IMPACT}.
+\subsection{Identifying a Risk}
+OWASP starts from the attacker's point of view. Those involved in identifying risks must collect information about possible attack sources, the methods by which the attack will be carried out, the vulnerabilities that will be exploited and the impact that the successful exploit will have on the business. The combinations are many: multiple attackers and a single impact or single attacker and multiple impacts. Always expecting the worst is the best solution. Unlike MEHARI, OWASP does not have a substantial knowledge base, but a few, albeit important, "standard" and more frequent risks.
+\subsection{Factors for Estimating Likelihood}
+Having drawn up a list of the risks that afflict our organization, it is necessary to evaluate the probability with which these will occur. We don't want to be too precise, a scale of the type \textit{Low, Medium, High} is enough. The factors that can affect likelihood are of two types: those concerning the type of \textit {threat agent} and those concerning vulnerabilities. Each factor has an associated value ranging from 1 to 9.
+\subsubsection{Threat Agent Factors}
+Always using the worst-case scenario we have to ask ourselves the following questions:
+\begin{itemize}
+    \itemsep0em
+    \item \textbf{How skilled is our opponent? (Skill)} A professional hacker will match the value 9, a high school student who enjoys sending pishing emails will match a 3, at most, as an encouragement...
+    \item \textbf{Why does he do it? (Motive)} What makes someone attack our organization? No reward (0) or high reward (9)?
+    \item \textbf{What does it take to carry out his diabolical plan? (Opportunity)} If it needs full physical access to the facility or expensive resources, well, then the risk is very low (0), but if it doesn't need any particular resources, things get complicated (7), for us.
+    \item \textbf{How many are there? (Size)} Fighting a few people (2) is different from fighting thousands of potential attackers (9).
+\end{itemize}
+\subsubsection{Vulnerability Factors}
+Similarly, let us ask ourselves questions relating to the vulnerabilities under consideration.
+\begin{itemize}
+    \itemsep0em
+    \item \textbf{How easy is it to discover this vulnerability? (Ease of Discovery)} Never in life (1) or simple Google search (9)?
+    \item \textbf{How easy is it to exploit vulnerability? (Ease of Exploit)} Only in dreams (1), easy enough (5) or are there automatic tools that do everything for you (9)?
+    \item \textbf{How well known is this vulnerability to this group of threat agents? (Awareness)} Unknown (1) or in the public knowledge (9)?
+    \item \textbf{How easily do we notice the exploit? (Intrusion Detection)} If we have an active detection system even immediately (1), if we don't even use a log system then it is almost impossible (9).
+\end{itemize}
+\subsection{Factors for Estimating Impact}
+The impact is divided into \textit{technical} and \textit{business impact} and similarly the factors that characterize them. Business impact is certainly more important, but you won't always have all the information about it available. A detailed technical impact analysis will help make business risk decisions.
+\subsubsection{Technical Impact Factors}
+Technical impact can be broken down into factors aligned with the traditional security areas of concern: confidentiality, integrity, availability, and accountability.
+\begin{itemize}
+    \itemsep0em
+    \item \textbf{How much sensitive data is exposed? (Loss of Confidentiality)} All (9), few but sensitive (6), minimal non-sensitive (2).
+    \item \textbf{Can the data be damaged? (Loss of Integrity)} Losing just your browser history isn't bad (1), almost a fortune in some cases. If, on the other hand, we lose large amounts of sensitive data, the damage is serious (9).
+    \item \textbf{Are the services stopped? (Loss of Availability)} The interruption of secondary services is not of vital importance (1), while the complete blackout of each main service has serious consequences (9).
+    \item \textbf{Is it possible to trace the culprit? (Loss of Accountability)} Totally (1), completely anonymous attacker (9)
+\end{itemize}
+\subsubsection{Business Impact Factors}
+As already mentioned, business impact is of primary importance, but it is recommended to focus on it only if your audience is executive level.
+\begin{itemize}
+    \itemsep0em
+    \item \textbf{How much money do we lose? (Financial damage )} Less than the cost to fix the vulnerability (1) o andiamo in bancarotta (9)?
+    \item \textbf{How high is the damage to reputation? (Reputation damage)} Reputation damage can be as minimal (1) as destructive (9) for an organization.
+    \item \textbf{How much exposure does the exploit introduce? (Non-compliance)} Minor violation (2), clear violation (5), high profile violation (7).
+    \item \textbf{How much personally identifiable information could be disclosed? (Privacy violation)} One individual (3), hundreds of people (5), thousands of people (7), millions of people (9).
+\end{itemize}
+\subsection{Determining the Severity of the Risk}
+At this point, we take all the numbers from the previous step and combine them to calculate an overall severity for this risk. This is done by figuring out whether the likelihood is low, medium, or high and then do the same for impact. The scale from 0 to 9 is converted: LOW = 0 to <3, MEDIUM = 3 to <6 and HIGH = 6 to 9. The final severity can be calculated using an \textit{Informal method} i.e. at a glance ( there is nothing wrong with that, you can correct any errors later) or using a \textit {Repeatable method} which involves a few more steps. The second method is used when it is necessary to defend the ratings or make them repeatable. Remember that there is quite a lot of uncertainty in these estimates and that these factors are intended to help the tester arrive at a sensible result. This process can be supported by automated tools to make the calculation easier (it's just an average calculation). Below is an example.
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+    \hline
+    \multicolumn{4}{|c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{THREAT AGENT FACTORS}}}\\
+    Skill level & Motive & Opportunity & Size\\
+    \hline
+    5 & 2 & 7 & 1\\
+    \hline
+    \multicolumn{4}{c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{VULNERABILITY FACTORS}}}\\
+    \hline
+    Ease of discovery & Ease of exploit & Awareness & Intrusion detection\\
+    \hline
+    3 & 6 & 9 & 2\\
+    \hline
+    \multicolumn{4}{|c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{Overall likelihood=4.375 (MEDIUM)}}}\\
+    \hline
+\end{tabularx}
+\end{table}
+\noindent
+In the same way, the impact is calculated while maintaining the distinction between technical and business impact.
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+    \hline
+    \multicolumn{4}{|c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{TECHNICAL IMPACT}}}\\
+    Loss of confidentiality & Loss of integrity & Loss of availability & Loss of accountability\\
+    \hline
+    9 & 7 & 5 & 8\\
+    \hline
+    \multicolumn{4}{c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{Overall technical impact=7.25 (HIGH)}}}\\
+    \hline
+\end{tabularx}
+\end{table}
+\noindent
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+    \hline
+    \multicolumn{4}{|c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{BUSINESS IMPACT}}}\\
+    Financial damage & Reputation damage & Non-compliance & Privacy violation\\
+    \hline
+    1 & 2 & 1 & 5\\
+    \hline
+    \multicolumn{4}{c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{Overall business impact=2.25 (LOW)}}}\\
+    \hline
+\end{tabularx}
+\end{table}
+\noindent
+These data are then compared with the following table.
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|c|c|c|c|}
+    \hline
+    \multicolumn{5}{|c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{OVERALL RISK SEVERITY}}}\\
+    \hline
+    {\cellcolor{dummy-cyan}} & HIGH & {\cellcolor{dummy-orange}MEDIUM} & {\cellcolor{dummy-red}HIGH} & {\cellcolor{dummy-red-strong}\textcolor{white}{CRITICAL}}\\
+    \cline{2-5}
+    {\cellcolor{dummy-cyan}} & MEDIUM & {\cellcolor{dummy-yellow}LOW} & {\cellcolor{dummy-orange}MEDIUM} & {\cellcolor{dummy-red}HIGH}\\
+    \cline{2-5}
+    {\cellcolor{dummy-cyan}} & LOW & {\cellcolor{dummy-green}NOTE} & {\cellcolor{dummy-yellow}LOW} & {\cellcolor{dummy-orange}MEDIUM} \\
+    \cline{2-5}
+     \multirow{-4}{*}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{IMPACT}}} & & LOW & MEDIUM & HIGH\\
+    \hline
+    & \multicolumn{4}{|c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{LIKELIHOOD}}}\\
+    \hline
+\end{tabularx}
+\end{table}
+\noindent
+In the example above, the likelihood is medium and the technical impact is high, so from a purely technical perspective it appears that the overall severity is high. However, note that the business impact is actually low, so the overall severity is best described as low as well. This is why understanding the business context of the vulnerabilities you are evaluating is so critical to making good risk decisions. Failure to understand this context can lead to the lack of trust between the business and security teams that is present in many organizations.
+\subsection{Fix and Fit}
+After the risks to the application have been classified, there will be a prioritized list of what to fix. As a general rule, the most severe risks should be fixed first. It simply doesn’t help the overall risk profile to fix less important risks, even if they’re easy or cheap to fix.\newline
+Furthermore, as mentioned previously, the tester (that is you) can customize the methodology by adding or removing factors or repeat the same procedure on different departments of the organization.
+
+\section{EBIOS}
+EBIOS Risk Manager (EBIOS RM) \cite{ANSSI2019} is the method for assessing and treating digital risks published by National Cybersecurity Agency of France (ANSSI). The EBIOS Risk Manager method adopts an approach to the management of the digital risk starting from the highest level (major missions of the studied object) to progressively reach the business and technical functions, by studying possible risk scenarios. EBIOS is based on the synthesis between "compliance" and "scenarios": approach through compliance is used to determine the security baseline (accidental and environmental risks) on which the approach through scenarios (intentional threats) is based in order to develop particularly targeted or sophisticated risk scenarios. This methodology is divided into 5 steps called \textit{workshops}.
+\begin{figure}[H]
+  \centering
+  \includesvg[inkscapelatex=false,width=\textwidth]{ebios-1.svg}
+  \caption{Digital risk management pyramid}
+\end{figure}
+\noindent
+\subsection{Workshop 1 - Scope and security baseline}
+Top management, business teams, CISO and the IT department participate in this workshop with the aim of identifying objectives, roles, responsibilities, time frame, assets, feared events and their severity, list of applicable requirements, implementation status, security gaps and their justification . In summary: the context. The workshop is more or less a brainstorming on "what to protect and from what". The focus is mainly on business impact, the severity of which is divided into 4 levels (G1 = Minor, G2 = Significant, G3 = Serious, G4 = Critical). To determine the security baseline, a compliance approach is adopted: in simple terms, the security reference standards that apply to the studied object are consulted, noting the implementation status i.e. applied without restriction, applied with restrictions or not applied.
+\subsection{Workshop 2 - Risk origins}
+We kick out the IT department and bring in a specialist in analyzing the digital threat (if necessary). The output of this workshop will be the list of priority Risk Origins/Target Objectives pairs selected for the rest of the study and of those that will be examined in a second moment. EBIOS provides a list of possible risk origins and related target objectives. The same risk origin can generate, where applicable, several RO/TO pairs, with target objectives of different natures. It is important to know the risk origin to understand what damage it can cause. Once the complete list has been drawn up, the most important pairs for the organization are selected (using the usual Low-to-High scale): the criteria that are generally used are motivation, needed resources or the "location" of origin. In terms of volume, 3 to 6 RO/TO pairs generally form a base that is sufficient to develop strategic scenarios.
+\subsection{Workshop 3 - Strategic scenarios}
+The third workshop is to be addressed as a preliminary risk study: obtaining an overview to identify the attack paths that a risk origin can use to reach its target i.e. each scenario corresponds to a RO/TO pair. At the end of the workshop, you must have established and identified the following elements: the possible threats, the critical stakeholders, the strategic scenarios and the security measures to apply. A stakeholder is considered critical if it can be exploited for an attack e.g. an employee with privileged digital access. Identifying them is important to insert them in the development of strategic scenarios. Stakeholders are generally assessed based on the exposure criteria (dependency, penetration) and cyber reliability (maturity, trust). The scenarios, built starting from the RO/TO pairs and critical stakeholders, are at a high level and identified by deduction. Once the sequencing of the events generated by the risk origin in order to reach its target has been described (e.g. attack graph, text or drawing), it is necessary to assess the level of severity of each of them, taking into account the potential business impact. All this work allows us to highlight our vulnerabilities (and I don't mean the fact that you are still afraid of the dark) and the goal of the last step of this workshop is to remedy them. The purpose of the security measures is to reduce the intrinsic threat level induced by the critical stakeholders (example: reduce the dependency on a subcontractor). However, even the security measures are at a very theoretical level, nothing technical.
+\subsection{Workshop 4 - Operational scenarios}
+Top management and the business team can leave and the IT department can enter again. This workshop adopts an approach similar to the one of the preceding workshop but focuses on the supporting assets. The operational scenarios obtained are assessed in terms of likelihood. At the end of this workshop, you will create a summary of all of the risks of the study. The strategic scenarios are expanded, going into the details of all the vulnerabilities exploited by the attack (even more than one at the same time) and the attention is focused on the critical supporting assets, the vectors of the modeled attack. Usually graphs or attack diagrams are used. If before you had a high-level idea of the attack (e.g. The attacker enters the database and steals the data) now we have to dissect every minimum step of the attacker (e.g. Phishing email -> Credential recovery -> Login -> Data theft). For each operational scenario, you will assess its overall likelihood, which reflects its probability of success or its feasibility. We start by evaluating the likelihood of the single separate actions which together will give the final probability of the complete attack.
+\subsection{Workshop 5 - Risk treatment}
+The same actors of the first workshop will participate on the last one. The goal now is to put together all the outputs of the previous workshops and churn out a risk treatment strategy that contains the summary of residual risks and a plan for continuous improvement and monitoring. You start by mapping the risk scenarios, usually on a grid or a radar (another type of chart, not that of submarines), based on their severity and likelihood: these representations will form your initial risk mapping. For each scenario, decide on an acceptance threshold of the risk or the minimum security level required in case of non-acceptance. The security measures to treat each scanario can be \textit{ad hoc} and supplement the measures on the ecosystem identified in workshop 3. The identification of these measures must result from the scenarios, there is no list to draw from. Once the measures have been applied and documented, we move on to the assessment of the residual risks. It is recommended to represent them in the same way as the initial risk mapping: the residual risk mapping can be used to more effectively assess the acceptance of residual risks. To conclude, it is necessary to set up the framework for monitoring risks. It is advisable that a commission meets periodically to assess whether the security measures are still effective or to study the emergence of new threats.
+\section{Methodologies compared}
+Let's take stock of the situation. These three are just some of the many methodologies available, but they give a clear overview of how most of them are organized. The following table shows the main peculiarities.
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|c|X|X|} 
+\hline
+{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{METHODOLOGY}} &
+\multicolumn{1}{|c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{PROS}}} & 
+\multicolumn{1}{|c|}{{\cellcolor{dummy-cyan}}\textbf{\textcolor{white}{CONS}}}\\ 
+\hline
+{\cellcolor{dummy-yellow}}MEHARI & Opensource, huge knowledge base  & For professionals\\
+\hline
+{\cellcolor{dummy-yellow}}OWASP & Opensource, easy to apply  & High level analysis, not too much support on risk mitigation phase\\
+\hline
+{\cellcolor{dummy-yellow}}EBIOS & Opensource, In-depth analysis, Face-to-Face meetings & Few automation, Long process\\
+\hline
+\end{tabularx}
+\end{table}\noindent
+Let's start by saying that all the so-called "methodologies" are different from what we will call "frameworks" in the next chapter: the methodologies are targeted processes for risk analysis. They are sets of tools that aim to help workers in the sector to carry out specific operations and do not constitute a real structured approach. Having said that, however, there are also differences between the methodologies. The first that catches your eye is the depth of the analysis. As can be seen, in fact, the OWASP methodology provides a higher level analysis than the others. This does not mean that OWASP is to be thrown away, quite the contrary. Its forte is the simplicity of implementation. On the other hand, EBIOS is the one that certainly makes a more in-depth analysis, but it is also true that it is an infinitely long, complex and not even minimally automated methodology. If with MEHARI and OWASP we can count on different levels of automation (from Excel to dedicated software), with EBIOS we must mainly rely on the "sixth sense" of technicians and stakeholders. Among the three, the most balanced would seem MEHARI which, together with EBIOS, provides more in-depth solutions (compared to OWASP) also for the treatment of (residual) risks. The "problem", if we want to define it that way, is that this methodology is aimed at CISOs and can be difficult to implement for a cybersecurity noob. As we will see also for the frameworks, the choice of the methodology for risk analysis depends on many factors and it is only up to those who will have to implement it to choose which suits better the organization.
+
